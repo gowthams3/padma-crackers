@@ -1,0 +1,9 @@
+{
+  "name": "padma-crackers-bazaar-local",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Padma Crackers Bazaar frontend with a local same-origin API proxy",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

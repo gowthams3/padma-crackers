@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fffaf2">
+  <meta name="description" content="Explore Padma Crackers Bazaar's celebration collection. Browse by category, compare prices and prepare your shopping list.">
+  <title>Padma Crackers Bazaar — Make Every Celebration Brighter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topline"><span>✦</span> South India’s largest retail cracker showroom · Sivakasi craftsmanship. <span class="topline-right">Salem&nbsp; · &nbsp;Coimbatore&nbsp; · &nbsp;Tamil Nadu</span></div>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="#" aria-label="Padma Crackers Bazaar home"><img src="assets/padma-logo.png" alt="Padma Crackers Bazaar"></a>
+      <div class="desktop-search searchbox"><span class="search-icon">⌕</span><input id="searchInput" type="search" placeholder="Search products, brands or item codes" autocomplete="off"><kbd>/</kbd></div>
+      <nav class="nav-actions">
+        <button class="text-action" id="languageButton" type="button">தமிழ்</button>
+        <button class="list-action" id="openCart" type="button"><span>My list</span><b id="headerCount">0</b></button>
+      </nav>
+    </div>
+    <div class="mobile-search searchbox"><span class="search-icon">⌕</span><input id="mobileSearchInput" type="search" placeholder="Search the collection"></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="skyshow" aria-hidden="true"><span class="burst burst-one"></span><span class="burst burst-two"></span><span class="burst burst-three"></span><span class="sky-trail trail-one"></span><span class="sky-trail trail-two"></span></div>
+      <div class="hero-art" aria-hidden="true"><div class="sun-disc"></div><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div><div class="spark spark-a">✦</div><div class="spark spark-b">✧</div><div class="spark spark-c">✦</div></div>
+      <div class="hero-content">
+        <div class="eyebrow"><i></i> THE PADMA CELEBRATION EDIT</div>
+        <div class="showroom-ribbon"><span class="ribbon-star">✦</span> LARGEST RETAIL CRACKER SHOWROOM IN SOUTH INDIA <span class="ribbon-star">✦</span></div>
+        <h1>Bring home the<br><em>joy of light.</em></h1>
+        <p>South India’s largest retail cracker showroom. Discover an extraordinary range of celebrations, compare prices and build your shopping list with ease.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#collection">Explore collection <span>↘</span></a><button class="button button-quiet" id="heroCart" type="button">View my list <span>→</span></button></div>
+        <div class="hero-proof"><span><b id="heroProductCount">—</b><small>products to explore</small></span><span class="proof-divider"></span><span><b>EN <i>·</i> தமிழ்</b><small>two languages</small></span><span class="proof-divider"></span><span><b>Since Sivakasi</b><small>made for celebrations</small></span></div>
+      </div>
+      <div class="hero-caption">PADMA CRACKERS BAZAAR <span>EST. SIVAKASI</span></div>
+    </section>
+
+    <section class="trust-row" aria-label="Shopping features">
+      <div><span class="trust-icon">⌕</span><span><b>Find faster</b><small>Search by name or code</small></span></div>
+      <div><span class="trust-icon">▦</span><span><b>Shop by collection</b><small>Organised with original categories</small></span></div>
+      <div><span class="trust-icon">₹</span><span><b>Clear pricing</b><small>See the current catalogue rate</small></span></div>
+      <div><span class="trust-icon">↗</span><span><b>One easy list</b><small>Share or submit your selection</small></span></div>
+    </section>
+
+    <section class="collection-section" id="collection">
+      <div class="section-intro">
+        <div><div class="eyebrow dark-eyebrow"><i></i> EXPLORE THE RANGE</div><h2>Find your kind of <em>celebration.</em></h2><p>Choose a collection to narrow down the catalogue.</p></div>
+        <div class="collection-note"><span class="note-dot"></span> Live catalogue · Updated from Padma</div>
+      </div>
+      <div class="category-rail" id="categoryRail" aria-label="Product categories">
+        <div class="skeleton-pill"></div><div class="skeleton-pill"></div><div class="skeleton-pill"></div><div class="skeleton-pill"></div>
+      </div>
+
+      <div class="catalog-toolbar">
+        <div class="catalog-count"><strong id="resultCount">Loading collection…</strong><span id="activeCategoryLabel">All products</span></div>
+        <div class="filters">
+          <label class="filter-select"><span class="sr-only">Brand</span><select id="brandFilter"><option value="">All brands</option></select></label>
+          <label class="filter-select"><span class="sr-only">Sort products</span><select id="sortFilter"><option value="featured">Recommended</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="az">Name: A to Z</option></select></label>
+          <label class="price-filter"><span>Up to ₹</span><input id="maxPrice" type="number" min="0" placeholder="Any price"></label>
+          <button class="clear-button" id="clearFilters" type="button">Reset</button>
+        </div>
+      </div>
+
+      <div class="catalog-layout">
+        <section class="product-area" aria-label="Products">
+          <div class="loading-state" id="loadingState"><span class="loader"></span><b>Curating the collection</b><small>Fetching the latest products and prices…</small></div>
+          <div class="product-grid" id="productGrid"></div>
+          <div class="load-more-wrap"><button class="button button-outline" id="loadMore" type="button" hidden>Load more products <span>↓</span></button></div>
+        </section>
+        <aside class="cart-panel" id="cartPanel">
+          <div class="cart-panel-head"><div><div class="eyebrow dark-eyebrow">YOUR SELECTION</div><h3>Shopping list</h3></div><span class="cart-bubble" id="panelCount">0</span></div>
+          <div class="cart-lines" id="cartLines"><div class="cart-empty"><span>✧</span><b>Your list starts here.</b><small>Add products to keep your selection together.</small></div></div>
+          <div class="budget-box"><div><b>Budget planner</b><strong id="budgetValue">₹5,000</strong></div><input id="budgetRange" type="range" min="500" max="50000" step="500" value="5000"><small id="budgetMessage">Set a budget to plan your shopping.</small></div>
+          <div class="cart-total"><span>Estimated product total</span><strong id="cartTotal">₹0</strong></div>
+          <button class="button button-dark checkout-button" id="checkoutButton" type="button" disabled>Continue to details <span>→</span></button>
+          <button class="share-button" id="shareButton" type="button" disabled>Share list on WhatsApp ↗</button>
+          <p class="cart-footnote">Final availability and order amount are confirmed by the store.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="store-band"><div><div class="eyebrow">ROOTED IN SIVAKASI</div><h2>Celebrations are better<br>when shopping feels simple.</h2><p>Explore the catalogue before you visit or share your selection with our team.</p></div><div class="store-stamp"><span>PADMA</span><b>CRACKERS<br>BAZAAR</b><small>SIVAKASI · TAMIL NADU</small></div></section>
+  </main>
+
+  <section class="contact-strip" id="contact">
+    <div class="contact-copy"><div class="eyebrow dark-eyebrow"><i></i> WE’RE HERE TO HELP</div><h2>Big celebrations start with a call.</h2><p>Connect with the Padma team for product details, bulk enquiries and catalogue assistance.</p>
+      <div class="phone-list"><a href="tel:9865946937"><span class="phone-symbol">☎</span><span><small>Call our team</small><b>98659 46937</b></span></a><a href="tel:8056606066"><span class="phone-symbol">☎</span><span><small>Call our team</small><b>80566 06066</b></span></a><a href="tel:8778261110"><span class="phone-symbol">☎</span><span><small>Call our team</small><b>87782 61110</b></span></a></div>
+      <div class="social-row"><span>FOLLOW THE CELEBRATION</span><div class="social-icons" aria-label="Social media"><span title="Instagram" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r=".8" fill="currentColor" stroke="none"/></svg></span><span title="Facebook" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 21v-8h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.5c-.7-.1-1.8-.2-3-.2-3 0-5 1.8-5 5.2V9H7v4h3v8z"/></svg></span><span title="YouTube" aria-label="YouTube"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor" stroke="none"/></svg></span></div></div>
+    </div>
+    <form id="contactForm" class="contact-form">
+      <input name="name" required placeholder="Your name" aria-label="Your name">
+      <input name="mobile" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="Mobile number" aria-label="Mobile number">
+      <input name="email" type="email" placeholder="Email (optional)" aria-label="Email">
+      <textarea name="message" required rows="2" placeholder="What would you like to know?" aria-label="Your message"></textarea>
+      <button class="button button-dark" type="submit" id="contactSubmit">Send enquiry <span>→</span></button>
+      <small id="contactStatus" role="status"></small>
+    </form>
+  </section>
+
+  <footer class="footer"><div class="footer-main"><img src="assets/padma-logo.png" alt="Padma Crackers Bazaar"><p>Making every celebration a little brighter.</p></div><div class="footer-location"><b>Head Office</b><span>Sivakasi, Tamil Nadu</span><b>Branches</b><span>Salem · Coimbatore</span><b>Call</b><span>98659 46937 · 80566 06066 · 87782 61110</span></div><div class="footer-bottom"><span>© <span id="year"></span> Padma Crackers Bazaar. All rights reserved.</span><span>Product prices and availability are subject to confirmation.</span></div></footer>
+
+  <div class="floating-contact" aria-label="Quick contact"><a class="float-call" href="tel:9865946937" aria-label="Call Padma"><span class="float-icon">☎</span><span>Call</span></a><a class="float-whatsapp" href="https://wa.me/919865946937" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><span class="float-icon">◉</span><span>WhatsApp</span></a></div>
+
+  <div class="mobile-list-bar" id="mobileListBar"><div><b>My shopping list</b><small id="mobileListMeta">0 products · ₹0</small></div><button id="mobileOpenCart" type="button">Review list <span>→</span></button></div>
+
+  <div class="lightbox" id="imageLightbox" aria-hidden="true"><button class="lightbox-close" id="closeLightbox" aria-label="Close image">×</button><button class="lightbox-prev" id="lightboxPrev" aria-label="Previous image">‹</button><img id="lightboxImage" alt="Product preview"><button class="lightbox-next" id="lightboxNext" aria-label="Next image">›</button><div class="lightbox-caption" id="lightboxCaption"></div></div>
+
+  <div class="modal-backdrop" id="checkoutModal" aria-hidden="true">
+    <section class="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+      <button class="modal-close" id="closeCheckout" aria-label="Close">×</button>
+      <div class="eyebrow dark-eyebrow">ALMOST THERE</div><h2 id="checkoutTitle">Your celebration list.</h2><p class="modal-lead">Review your selection and share your details with the Padma team.</p>
+      <div class="checkout-summary" id="checkoutSummary"></div>
+      <form id="customerForm">
+        <div class="form-grid">
+          <label>Full name<input name="name" required placeholder="Your name"></label>
+          <label>Mobile number<input name="mobile" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number"></label>
+          <label class="full-field">Address<input name="address" required placeholder="Door no., street and area"></label>
+          <label>PIN code<input name="pin_code" required inputmode="numeric" pattern="[0-9]{6}" maxlength="6" placeholder="6-digit PIN"></label>
+          <label>Email address<input name="email" type="email" required placeholder="you@example.com"></label>
+          <label>State<input name="state" required value="Tamil Nadu"></label>
+          <label>District<input name="district" required placeholder="Your district"></label>
+        </div>
+        <div class="order-message" id="orderMessage" role="status"></div>
+        <button class="button button-dark submit-order" id="submitOrder" type="submit">Submit selection <span>→</span></button>
+      </form>
+      <div class="success-actions" id="successActions" hidden><b>Your selection has been submitted.</b><p>You can download the order PDF for reference.</p><button class="button button-dark" id="downloadPdf" type="button">Download order PDF ↓</button></div>
+    </section>
+  </div>
+  <script src="app.js" defer></script>
+</body>
+</html>
